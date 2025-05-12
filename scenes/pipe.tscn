@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=4 uid="uid://bm4c7k13tux13"]
+
+[ext_resource type="Script" uid="uid://3wk0krmdb3sr" path="res://scenes/pipe.gd" id="1_arpqm"]
+[ext_resource type="Texture2D" uid="uid://dxsrw4atqmlb6" path="res://assets/tiles/PipeStyle1.png" id="2_8p0di"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xubdd"]
+texture = ExtResource("2_8p0di")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cakrd"]
+sources/0 = SubResource("TileSetAtlasSource_xubdd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejsh2"]
+size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ybk5"]
+size = Vector2(112, 705.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdldm"]
+size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ss4sx"]
+size = Vector2(112, 704)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arpqm"]
+size = Vector2(38, 384)
+
+[node name="Pipe" type="Area2D" groups=["pipes"]]
+script = ExtResource("1_arpqm")
+
+[node name="Pipes" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD//wMAAAAGAAUAAAD//wQAAAAGAAYAAAAAAAMAAAAHAAUAAAAAAAQAAAAHAAYAAAD//wUAAAAGAAcAAAD//wYAAAAGAAcAAAD//wcAAAAGAAcAAAD//wgAAAAGAAcAAAD//wkAAAAGAAcAAAD//woAAAAGAAcAAAAAAAoAAAAHAAcAAAAAAAkAAAAHAAcAAAAAAAgAAAAHAAcAAAAAAAcAAAAHAAcAAAAAAAYAAAAHAAcAAAAAAAUAAAAHAAcAAAAAAAsAAAAHAAcAAAAAAAwAAAAHAAcAAAAAAA0AAAAHAAcAAAAAAA4AAAAHAAcAAAD//w4AAAAGAAcAAAD//w0AAAAGAAcAAAD//wwAAAAGAAcAAAD//wsAAAAGAAcAAAD///z/AAAGAAkAAAAAAPz/AAAHAAkAAAAAAPv/AAAHAAgAAAD///v/AAAGAAgAAAD///r/AAAGAAcAAAD///n/AAAGAAcAAAD///j/AAAGAAcAAAD///f/AAAGAAcAAAD///b/AAAGAAcAAAD///X/AAAGAAcAAAD///T/AAAGAAcAAAD///P/AAAGAAcAAAD///L/AAAGAAcAAAD///H/AAAGAAcAAAAAAPH/AAAHAAcAAAAAAPL/AAAHAAcAAAAAAPP/AAAHAAcAAAAAAPT/AAAHAAcAAAAAAPX/AAAHAAcAAAAAAPb/AAAHAAcAAAAAAPf/AAAHAAcAAAAAAPj/AAAHAAcAAAAAAPn/AAAHAAcAAAAAAPr/AAAHAAcAAAA=")
+tile_set = SubResource("TileSet_cakrd")
+collision_enabled = false
+
+[node name="LowerEnterShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 224)
+shape = SubResource("RectangleShape2D_ejsh2")
+
+[node name="LowerShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 607.25)
+shape = SubResource("RectangleShape2D_4ybk5")
+
+[node name="UpperEnterShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -224)
+shape = SubResource("RectangleShape2D_tdldm")
+
+[node name="UpperShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -608)
+shape = SubResource("RectangleShape2D_ss4sx")
+
+[node name="ScoreArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea"]
+position = Vector2(83, 0)
+shape = SubResource("RectangleShape2D_arpqm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="ScoreArea" to="." method="_on_score_area_body_entered"]

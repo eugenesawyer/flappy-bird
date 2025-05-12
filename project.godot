@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Flappy Bird"
+run/main_scene="uid://csaquleth5bcc"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=1152
+window/size/resizable=false
+window/size/borderless=true
+
+[editor]
+
+movie_writer/movie_file="/Users/eugenesawyer/Projects/Black Mountain/flappy-bird/new_clip.avi"
+
+[global_group]
+
+pipes=""
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/size/viewport_height=1024
